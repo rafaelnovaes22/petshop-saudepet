@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saúde Pet, clínica veterinária em BH</title>
+<meta name="description" content="Clínica geral de pequenos animais desde 2013. Vacinas, cirurgias, exames e comportamento. Av. Bernardo Monteiro, 1441.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4faf4;--sm:#ffffff;--ink:#1e2b22;--mut:#64766a;--gr:#2e9e4b;--gd:#e8b93c;--ln:rgba(30,43,34,.15);--rd:20px}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:Archivo,system-ui,sans-serif;margin:0;overflow-x:hidden}
+::selection{background:var(--gr);color:#fff}
+img{display:block;max-width:100%}
+a{color:inherit}
+.d{font-family:"Instrument Serif",serif;font-weight:400;line-height:1.02}
+.pl{position:fixed;inset:0;z-index:200;background:#eaf4ea;display:flex;align-items:flex-end;justify-content:space-between;padding:5vw;transition:opacity .7s ease,visibility .7s}
+.pl.g{opacity:0;visibility:hidden}
+.pl b{font-family:"Instrument Serif",serif;font-size:clamp(2.6rem,10vw,7.5rem);line-height:1}
+.pl b i{font-style:normal;color:var(--gr)}
+.pl span{font-size:.8rem;letter-spacing:.35em;text-transform:uppercase;color:var(--mut)}
+.hd{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.7rem 4vw;border-bottom:1px solid transparent;transition:background .35s,border-color .35s}
+.hd.f{background:rgba(244,250,244,.92);backdrop-filter:blur(14px);border-color:var(--ln)}
+.hd-l img{height:46px;display:block}
+.hd-n{display:flex;gap:2rem}
+.hd-n a{text-decoration:none;font-size:.82rem;letter-spacing:.22em;text-transform:uppercase;color:var(--mut)}
+.hd-n a:hover{color:var(--gr)}
+.hd-c{background:var(--gr);color:#fff;border:0;border-radius:999px;padding:.8rem 1.6rem;font-weight:700;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;cursor:pointer;font-family:inherit}
+.hd-m{display:none;background:none;border:0;color:var(--ink);font-size:1.6rem;cursor:pointer}
+.hro{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:radial-gradient(70rem 34rem at 50% 110%,rgba(46,158,75,.18),transparent),#f4faf4}
+.hro-x{position:relative;padding:14vh 4vw 4vh;display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center}
+.hro-s{display:inline-block;font-size:.78rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gr);border:1px solid rgba(46,158,75,.5);border-radius:999px;padding:.55rem 1.2rem;margin-bottom:1.4rem}
+.hro-t{font-size:clamp(2.8rem,9.5vw,8.5rem);margin:0}
+.hro-t em{color:var(--gr)}
+.hro-p{max-width:34rem;color:#43564a;font-size:clamp(1rem,1.6vw,1.2rem);line-height:1.6}
+.hro-a{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.8rem}
+.hro-logo{background:#fff;border:1px solid var(--ln);border-radius:26px;padding:3rem;box-shadow:0 30px 60px rgba(30,43,34,.15)}
+.hro-logo img{width:100%}
+.bt{display:inline-block;border-radius:999px;padding:1rem 2.1rem;font-weight:700;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:1px solid transparent;font-family:inherit}
+.bt1{background:var(--gr);color:#fff}
+.bt1:hover{transform:translateY(-2px)}
+.bt2{border-color:var(--ln);color:var(--ink)}
+.bt2:hover{border-color:var(--gr);color:var(--gr)}
+.hro-f{position:relative;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ln);margin:3rem 4vw 0;padding-bottom:4vh}
+.hro-f div{padding:1.2rem 4vw 0;border-left:1px solid var(--ln)}
+.hro-f div:first-child{border-left:0;padding-left:0}
+.hro-f b{font-family:"Instrument Serif",serif;font-size:clamp(1.4rem,2.4vw,2rem);display:block;font-weight:400}
+.hro-f span{font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--mut)}
+.mq{border-top:1px solid var(--ln);border-bottom:1px solid var(--ln);overflow:hidden;background:var(--gr);color:#fff;padding:.9rem 0}
+.mq-t{display:flex;gap:3rem;width:max-content;animation:mq 22s linear infinite;font-family:"Instrument Serif",serif;font-size:1.15rem;white-space:nowrap}
+@keyframes mq{to{transform:translateX(-50%)}}
+.mn{padding:14vh 4vw;max-width:90rem}
+.mn p{font-family:"Instrument Serif",serif;font-size:clamp(1.7rem,4.2vw,3.2rem);line-height:1.3;margin:0}
+.mn em{color:var(--gr)}
+.sc{padding:8vh 4vw}
+.sc-h{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;border-bottom:1px solid var(--ln);padding-bottom:1.2rem;margin-bottom:2.5rem}
+.sc-h h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(2.2rem,5.5vw,4rem);margin:0}
+.sc-h span{color:var(--mut);font-size:.8rem;letter-spacing:.3em;text-transform:uppercase}
+.sv-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.cd{background:var(--sm);border:1px solid var(--ln);border-radius:var(--rd);padding:2rem;transition:transform .35s,border-color .35s}
+.cd:hover{transform:translateY(-6px);border-color:rgba(46,158,75,.5)}
+.cd n{font-family:"Instrument Serif",serif;color:var(--gr);font-size:1rem;letter-spacing:.15em}
+.cd h3{font-size:1.3rem;margin:.9rem 0 .6rem}
+.cd p{color:var(--mut);line-height:1.65;margin:0 0 1.4rem}
+.cd f{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--ln);padding-top:1.1rem}
+.cd f a{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gr);text-decoration:none;font-weight:700}
+.tm{background:var(--ink);color:var(--bg);border-radius:calc(var(--rd) + 6px);margin:0 4vw;padding:3.5rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.tm h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(1.9rem,4.5vw,3.2rem);margin:0 0 1rem}
+.tm h2 em{color:var(--gd)}
+.tm p{color:#b9c6bd;line-height:1.7}
+.tm ul{list-style:none;padding:0;margin:1.4rem 0}
+.tm li{padding:.8rem 0;border-top:1px solid rgba(244,250,244,.2);display:flex;gap:.9rem;align-items:center}
+.tm li::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--gd);flex:none}
+.vac{background:var(--sm);border:1px solid var(--ln);border-radius:calc(var(--rd) + 6px);margin:0 4vw;padding:3.5rem 3rem}
+.vac h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(1.9rem,4.5vw,3.2rem);margin:0 0 .6rem}
+.vac h2 em{color:var(--gr)}
+.vac>p{color:var(--mut);max-width:40rem;line-height:1.7}
+.vac-o{display:flex;gap:.8rem;flex-wrap:wrap;margin:1.6rem 0}
+.vac-o button{background:var(--bg);border:1px solid var(--ln);color:var(--ink);border-radius:999px;padding:.9rem 1.6rem;font-size:.95rem;font-weight:700;cursor:pointer;font-family:inherit}
+.vac-o button.on{background:var(--gr);border-color:var(--gr);color:#fff}
+#vacl{list-style:none;margin:0;padding:0}
+#vacl li{padding:.9rem 0;border-top:1px solid var(--ln);line-height:1.65}
+#vacl b{color:var(--gr)}
+.dep{background:linear-gradient(135deg,#eaf4ea,#f4faf4);border:1px solid var(--ln);border-radius:calc(var(--rd) + 6px);margin:0 4vw;padding:3.5rem;text-align:center}
+.dep q{font-family:"Instrument Serif",serif;font-style:italic;font-size:clamp(1.2rem,2.6vw,1.9rem);line-height:1.5}
+.dep p{color:var(--mut);letter-spacing:.12em;text-transform:uppercase;font-size:.82rem;margin-top:1.2rem}
+.ag{background:var(--sm);border:1px solid var(--ln);border-radius:calc(var(--rd) + 6px);margin:0 4vw;padding:4rem 3.5rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.ag h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(2.2rem,4.5vw,3.4rem);margin:0 0 1rem}
+.ag p{color:var(--mut);line-height:1.7}
+.fm label{display:block;font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--mut);margin:1.1rem 0 .5rem}
+.fm input,.fm select{width:100%;box-sizing:border-box;background:#f4faf4;border:1px solid var(--ln);border-radius:14px;color:var(--ink);padding:1rem;font-size:1rem;font-family:inherit}
+.fm input:focus,.fm select:focus{outline:none;border-color:var(--gr)}
+.fm button{margin-top:1.6rem;width:100%}
+.fq-i{border-bottom:1px solid var(--ln)}
+.fq-q{width:100%;background:none;border:0;color:var(--ink);display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;font-size:1.1rem;font-weight:600;cursor:pointer;text-align:left;font-family:inherit}
+.fq-q i{font-style:normal;color:var(--gr);font-size:1.5rem;transition:transform .3s}
+.fq-i.o .fq-q i{transform:rotate(45deg)}
+.fq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;color:var(--mut);line-height:1.7}
+.fq-a p{margin:0 0 1.5rem;max-width:44rem}
+.ft{padding:10vh 4vw 2rem;border-top:1px solid var(--ln);margin-top:8vh}
+.ft-g{font-family:"Instrument Serif",serif;font-size:clamp(2.6rem,10vw,9rem);margin:0}
+.ft-g em{color:var(--gr)}
+.ft-r{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin:3rem 0;padding:2rem 0;border-top:1px solid var(--ln);border-bottom:1px solid var(--ln)}
+.ft-r h4{font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--mut);margin:0 0 1rem}
+.ft-r p,.ft-r a{line-height:2;color:var(--ink);text-decoration:none}
+.ft-b{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;color:var(--mut);font-size:.85rem}
+.rv{opacity:0;transform:translateY(36px);transition:opacity .8s ease,transform .8s ease}
+.rv.on{opacity:1;transform:none}
+@media(max-width:960px){.hd-n{display:none}.hd-m{display:block}.hd-n.o{display:flex;position:fixed;inset:0;background:#f4faf4;flex-direction:column;align-items:center;justify-content:center;gap:2rem}.sv-g{grid-template-columns:1fr}.tm,.ag,.hro-x{grid-template-columns:1fr}.hro-f{grid-template-columns:repeat(2,1fr)}.hro-f div:nth-child(3){border-left:0;padding-left:0}.ft-r{grid-template-columns:1fr}.tm,.vac{padding:2.2rem 1.4rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001s !important;transition-duration:.001s !important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="pl" id="pl"><span>Saúde Pet</span><b><i id="pln">0</i>%</b></div>
+<header class="hd" id="hd">
+<a class="hd-l" href="#topo"><img src="assets/logo.jpg" alt="Saúde Pet"></a>
+<nav class="hd-n" id="hdn">
+<a href="#servicos">Serviços</a>
+<a href="#equipe">Equipe</a>
+<a href="#vacinas">Vacinas</a>
+<a href="#agendar">Agendar</a>
+</nav>
+<a class="hd-c" href="https://wa.me/5531999395563?text=Ol%C3%A1!%20Quero%20agendar%20consulta." target="_blank" rel="noopener">Agendar</a>
+<button class="hd-m" id="hdm" aria-label="Abrir menu">☰</button>
+</header>
+<section class="hro" id="topo">
+<div class="hro-x">
+<div>
+<span class="hro-s">BH, desde 2013</span>
+<h1 class="hro-t d">Cão feliz é <em>cão com saúde.</em></h1>
+<p class="hro-p">Clínica geral de pequenos animais com medicina preventiva, acompanhamento personalizado e 32 anos de experiência no comando.</p>
+<div class="hro-a">
+<a class="bt bt1" href="https://wa.me/5531999395563?text=Ol%C3%A1!%20Quero%20agendar%20consulta." target="_blank" rel="noopener">Agendar consulta</a>
+<a class="bt bt2" href="#vacinas">Guia de vacinas</a>
+</div>
+</div>
+<div class="hro-logo rv"><img src="assets/logo.jpg" alt="Saúde Pet, clínica veterinária"></div>
+</div>
+<div class="hro-f">
+<div><b>32 anos</b><span>de clínica e cirurgia</span></div>
+<div><b>Preventiva</b><span>medicina primeiro</span></div>
+<div><b>Pets</b><span>pequenos animais</span></div>
+<div><b>BH</b><span>Funcionários</span></div>
+</div>
+</section>
+<div class="mq" aria-hidden="true"><div class="mq-t" id="mqt">
+<span>Vacinas •</span><span>Cirurgias •</span><span>Exames •</span><span>Comportamento •</span><span>Hospedagem •</span><span>Emergência •</span>
+</div></div>
+<section class="mn rv">
+<p>Tratar bicho é tratar família. <em>Aqui cada pet tem nome, ficha e acompanhamento de verdade,</em> do filhote ao idoso.</p>
+</section>
+<section class="sc" id="servicos">
+<div class="sc-h rv"><h2 class="d">Serviços</h2><span>tudo num lugar</span></div>
+<div class="sv-g">
+<article class="cd rv"><n>I</n><h3>Clínica geral</h3><p>Consultas, check-ups e acompanhamento contínuo com visão generalista e preventiva.</p><f><span></span><a href="#agendar">Agendar →</a></f></article>
+<article class="cd rv"><n>II</n><h3>Vacinas e vermífugo</h3><p>Protocolos em dia com carteirinha organizada e lembrete da próxima dose.</p><f><span></span><a href="#vacinas">Ver guia →</a></f></article>
+<article class="cd rv"><n>III</n><h3>Cirurgias eletivas</h3><p>Castração e procedimentos programados com 32 anos de cirurgia no comando.</p><f><span></span><a href="#agendar">Avaliar →</a></f></article>
+<article class="cd rv"><n>IV</n><h3>Exames</h3><p>Laboratoriais e de imagem para diagnóstico preciso antes de qualquer conduta.</p><f><span></span><a href="#agendar">Pedir →</a></f></article>
+<article class="cd rv"><n>V</n><h3>Comportamento</h3><p>Atendimento clínico comportamental com pós em comportamento animal.</p><f><span></span><a href="#agendar">Conversar →</a></f></article>
+<article class="cd rv"><n>VI</n><h3>Hospedagem</h3><p>Hotel parceiro Recanto Canino para viajar tranquila com o pet bem cuidado.</p><f><span></span><a href="#agendar">Reservar →</a></f></article>
+</div>
+</section>
+<section class="tm rv" id="equipe">
+<div>
+<h2 class="d">Quem <em>cuida.</em></h2>
+<p>Equipe fixa, nome e sobrenome, que acompanha seu pet por anos, não por consulta.</p>
+</div>
+<div>
+<ul>
+<li>Dra. Vanessa Mendonça Castro: 32 anos de clínica e cirurgia, UFMG e PUC.</li>
+<li>Dra. Thaíssa Castro Franco: comportamento animal, UFMG e Qualittas.</li>
+<li>Nathália Vieira: estagiária, 10º período UNI-BH.</li>
+<li>Cidinha: secretária há 6 anos, o coração da recepção.</li>
+</ul>
+</div>
+</section>
+<section class="vac rv" id="vacinas">
+<h2 class="d">Guia de <em>vacinas.</em></h2>
+<p>Toque na fase do pet e veja o essencial. O protocolo final é sempre da veterinária na consulta.</p>
+<div class="vac-o">
+<button data-v="filhote" class="on">Filhote</button>
+<button data-v="adulto">Adulto</button>
+<button data-v="idoso">Idoso</button>
+</div>
+<ul id="vacl"></ul>
+</section>
+<section class="dep rv">
+<q>Há 3 anos as doutoras acompanham minha Kali com carinho e dedicação. Vacinas, exames, nutrição e comportamento, sempre atentas.</q>
+<p>Lucas Lobato, tutor da Kali</p>
+</section>
+<section class="sc" id="agendar">
+<div class="sc-h rv"><h2 class="d">Agendar</h2><span>resposta rapidinha</span></div>
+</section>
+<div class="ag rv">
+<div>
+<h2 class="d">Traga seu <em>melhor amigo.</em></h2>
+<p>Preencha e caia no WhatsApp com a mensagem pronta. Av. Bernardo Monteiro, 1441, Funcionários, BH.</p>
+<p><b style="color:var(--gr)">(31) 99939-5563.</b><br>Seg a Sex em horário comercial.</p>
+</div>
+<form class="fm" id="fm">
+<label for="fn">Seu nome</label>
+<input id="fn" type="text" placeholder="Como podemos chamar você" required autocomplete="name">
+<label for="fs">Assunto</label>
+<select id="fs"><option>Consulta</option><option>Vacina</option><option>Cirurgia eletiva</option><option>Exame</option><option>Comportamento</option><option>Hospedagem</option></select>
+<label for="fp">Nome do pet</label>
+<input id="fp" type="text" placeholder="Ex.: Kali" required>
+<button class="bt bt1" type="submit">Enviar no WhatsApp →</button>
+</form>
+</div>
+<section class="sc">
+<div class="sc-h rv"><h2 class="d">Dúvidas comuns</h2><span>faq</span></div>
+<div class="rv">
+<div class="fq-i"><button class="fq-q">Atendem emergência?<i>+</i></button><div class="fq-a"><p>Chame no WhatsApp descrevendo o caso que orientamos na hora o melhor caminho.</p></div></div>
+<div class="fq-i"><button class="fq-q">Quais vacinas meu filhote precisa?<i>+</i></button><div class="fq-a"><p>Use o guia aqui do site para ter uma base e confirme o protocolo na consulta.</p></div></div>
+<div class="fq-i"><button class="fq-q">Fazem castração?<i>+</i></button><div class="fq-a"><p>Sim, cirurgias eletivas com avaliação prévia e pós-operatório acompanhado.</p></div></div>
+<div class="fq-i"><button class="fq-q">Onde ficam?<i>+</i></button><div class="fq-a"><p>Av. Bernardo Monteiro, 1441, Funcionários, BH, dentro da Dogs Shop.</p></div></div>
+</div>
+</section>
+<footer class="ft">
+<h2 class="ft-g d">Auquimia <em>de cuidado.</em></h2>
+<div class="ft-r">
+<div><h4>Clínica</h4><p>Av. Bernardo Monteiro, 1441<br>Funcionários, BH<br><a href="https://www.google.com/maps/search/?api=1&query=Av.+Bernardo+Monteiro+1441+Belo+Horizonte" target="_blank" rel="noopener">Abrir no mapa ↑</a></p></div>
+<div><h4>Fale</h4><p><a href="https://wa.me/5531999395563" target="_blank" rel="noopener">(31) 99939-5563</a><br><a href="mailto:vanessamendoncacastro@gmail.com">E-mail da clínica</a><br><a href="https://www.instagram.com/saudepetveterinaria/" target="_blank" rel="noopener">Instagram</a><br><a href="#topo">Voltar ao topo ↑</a></p></div>
+<div><h4>Cuidado</h4><p>Preventiva sempre<br>Acompanhamento nominal<br>Desde 2013</p></div>
+</div>
+<div class="ft-b"><span>© <i id="yr">2026</i> Saúde Pet.</span><span>Logo: Saúde Pet.</span></div>
+</footer>
+<script>
+(function(){
+"use strict";
+var $=function(s,c){return (c||document).querySelector(s)};
+var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+/* assistente */
+var KB=[
+{k:["vacina","vacinação","dose"],a:"Use o guia de vacinas aqui na página e confirme o protocolo na consulta."},
+{k:["castração","castracao","cirurgia","opera"],a:"Sim, cirurgias eletivas com avaliação prévia. Agende pelo formulário."},
+{k:["emergência","emergencia","urgente","socorro"],a:"Chame no WhatsApp agora descrevendo o caso: (31) 99939-5563."},
+{k:["onde","endereço","endereco","local","chegar"],a:"Av. Bernardo Monteiro, 1441, Funcionários, BH, dentro da Dogs Shop."},
+{k:["preço","preco","valor","quanto","consulta"],a:"Valores por WhatsApp. Chama que passamos na hora."},
+{k:["comportamento","medo","ansiedade","agressivo"],a:"Temos atendimento clínico comportamental com pós na área. Agende uma avaliação."},
+{k:["hospedagem","hotel","viagem"],a:"Hospedagem em parceria com o Hotel Recanto Canino. Reserve pelo zap."},
+{k:["horário","horario","hora","abre"],a:"Seg a Sex em horário comercial. Confirme o dia no zap."}
+];
+var FB='Não sei ainda. <a href="https://wa.me/5531999395563" target="_blank" rel="noopener">Chama no zap</a> que respondemos.';
+var css="#wxb{position:fixed;right:1.2rem;bottom:1.2rem;z-index:150;width:60px;height:60px;border-radius:50%;border:0;background:#2e9e4b;color:#fff;font-size:1.5rem;cursor:pointer;font-family:inherit;box-shadow:0 8px 30px rgba(0,0,0,.4)}#wxp{position:fixed;right:1.2rem;bottom:5.2rem;z-index:150;width:min(350px,90vw);background:#151515;color:#f5f5f5;border:1px solid rgba(255,255,255,.15);border-radius:18px;overflow:hidden;display:none;flex-direction:column}#wxp.on{display:flex}#wxh{padding:.9rem 1.1rem;font-weight:800;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;background:#2e9e4b;color:#fff;display:flex;justify-content:space-between;align-items:center}#wxx{cursor:pointer}#wxm{padding:1rem 1.1rem;max-height:300px;overflow-y:auto;display:flex;flex-direction:column;gap:.6rem;font-size:.92rem;line-height:1.55}#wxm .u{align-self:flex-end;background:rgba(255,255,255,.12);border-radius:12px 12px 3px 12px;padding:.6rem .9rem;max-width:85%}#wxm .b{align-self:flex-start;background:rgba(255,255,255,.07);border-radius:12px 12px 12px 3px;padding:.6rem .9rem;max-width:90%}#wxm a{color:#7fd6a4}#wxf{display:flex;border-top:1px solid rgba(255,255,255,.12)}#wxi{flex:1;background:none;border:0;color:#f5f5f5;padding:.9rem 1rem;font-size:.95rem;font-family:inherit;outline:none;min-width:0}#wxs{background:none;border:0;color:#7fd6a4;font-size:1.3rem;padding:0 1rem;cursor:pointer}";
+var st=document.createElement("style");st.textContent=css;document.head.appendChild(st);
+var w=document.createElement("div");w.innerHTML='<button id="wxb" aria-label="Perguntar">✦</button><div id="wxp"><div id="wxh"><span>Assistente</span><span id="wxx">×</span></div><div id="wxm"></div><div id="wxf"><input id="wxi" placeholder="Pergunte..." autocomplete="off"><button id="wxs" aria-label="Enviar">→</button></div></div>';document.body.appendChild(w);
+var said=false;
+function say(t,who){var m=document.getElementById("wxm");var d=document.createElement("div");d.className=who;d.textContent=t;m.appendChild(d);m.scrollTop=m.scrollHeight}
+function answer(t){var l=t.toLowerCase(),best=null,bs=0;KB.forEach(function(e){var s=0;e.k.forEach(function(k){if(l.indexOf(k)>=0)s+=k.length});if(s>bs){bs=s;best=e}});say(best?best.a:FB,"b")}
+function send(){var i=document.getElementById("wxi");var t=i.value.trim();if(!t)return;say(t,"u");i.value="";setTimeout(function(){answer(t)},350)}
+document.getElementById("wxb").onclick=function(){var p=document.getElementById("wxp");p.classList.toggle("on");if(p.classList.contains("on")&&!said){said=true;say("Olá! Pergunte sobre vacinas, cirurgias ou endereço.","b")}};
+document.getElementById("wxx").onclick=function(){document.getElementById("wxp").classList.remove("on")};
+document.getElementById("wxs").onclick=send;
+document.getElementById("wxi").addEventListener("keydown",function(e){if(e.key==="Enter")send()});
+/* vacinas */
+var VAC={
+filhote:[["A partir de 45 dias","V8 ou V10, 3 a 4 doses com intervalo da vet."],["4 meses","Antirrábica em dose única."],["Todos os anos","Reforço anual de todas."]],
+adulto:[["Anual","V8/V10 mais antirrábica, 1 dose de cada."],["Exames","Check-up anual com sangue e imagem."]],
+idoso:[["Anual","Protocolo completo com avaliação cardiológica."],["Semestral","Consultas de acompanhamento a cada 6 meses."]]
+};
+function vac(k){var l=$("#vacl");l.innerHTML="";VAC[k].forEach(function(v){var li=document.createElement("li");li.innerHTML="<b>"+v[0]+":</b> "+v[1];l.appendChild(li)})}
+$$(".vac-o button").forEach(function(b){b.addEventListener("click",function(){$$(".vac-o button").forEach(function(x){x.classList.remove("on")});b.classList.add("on");vac(b.getAttribute("data-v"))})});
+vac("filhote");
+/* base */
+var pl=$("#pl"),pln=$("#pln"),n=0;
+var rm=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+function hidePl(){pl.classList.add("g");document.body.style.overflow="";setTimeout(function(){pl.remove()},800)}
+if(rm){hidePl()}else{document.body.style.overflow="hidden";var t=setInterval(function(){n=Math.min(100,n+Math.ceil(Math.random()*14));pln.textContent=n;if(n>=100){clearInterval(t);setTimeout(hidePl,250)}},110)}
+var hd=$("#hd"),hdn=$("#hdn");
+window.addEventListener("scroll",function(){hd.classList.toggle("f",window.scrollY>40)},{passive:true});
+$("#hdm").addEventListener("click",function(){hdn.classList.toggle("o")});
+$$("#hdn a").forEach(function(a){a.addEventListener("click",function(){hdn.classList.remove("o")})});
+var mqt=$("#mqt");mqt.innerHTML+=mqt.innerHTML;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target)}})},{threshold:.12});
+$$(".rv").forEach(function(el){io.observe(el)});
+$$(".fq-i").forEach(function(it){var q=$(".fq-q",it),a=$(".fq-a",it);q.addEventListener("click",function(){var open=it.classList.contains("o");$$(".fq-i.o").forEach(function(o){o.classList.remove("o");$(".fq-a",o).style.maxHeight="0"});if(!open){it.classList.add("o");a.style.maxHeight=a.scrollHeight+"px"}})});
+$("#fm").addEventListener("submit",function(e){e.preventDefault();var msg="Olá! Sou "+$("#fn").value+", assunto: "+$("#fs").value+", pet: "+$("#fp").value+".";window.open("https://wa.me/5531999395563?text="+encodeURIComponent(msg),"_blank")});
+$("#yr").textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
